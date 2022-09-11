@@ -32,7 +32,27 @@
          .lic {
              font-family: 'Poppins', sans-serif;
          }
+         #txt {
+             text-align: right;
+         }
   </style>
+    <script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
 <body>
     <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -157,5 +177,6 @@ Anime-
     <a href="Naruto.html"><img  class="demo" src="Naruto.png" alt="Flowers in Chania"></a>
     <br>
     <center><a class="lic" href="LICENSE.txt">View_License</a></center>
+    <div id="txt"></div>
 </body>
 </html>

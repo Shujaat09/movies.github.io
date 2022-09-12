@@ -20,9 +20,14 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
-                        }
- <a href="Allofus.html"><img class="demo"  src="Dead.jpeg" alt="Flowers in Chania"></a>
-     <a href="Train.html"><img  class="demo" src="Train.png" alt="Flowers in Chania"></a>
+              }
+  </style>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+  <ul id="myUl">
+    <li><a href="Allofus.html"><img class="demo"  src="Dead.jpeg" alt="All of us are dead"></a></li>
+     <li><a href="Train.html"><img  class="demo" src="Train.png" alt="Train to busan"></a><li>
+  </ul>
      <a href="Moneykr.html"><img  class="demo" src="moneykr.png" alt="Flowers in Chania">
       <a href="revenge.txt"><img  class="demo" src="https://m.media-amazon.com/images/M/MV5BN2U4Yzg0ZTctYTMzMS00M2YwLTkxZDAtMzYwM2I0YTY2M2Q2XkEyXkFqcGdeQXVyMzE4MDkyNTA@._V1_FMjpg_UX1000_.jpg" alt="Flowers in Chania"></a>                                                                                   
     <a href="Un.html"><img  class="demo" src="Un.png" alt="Flowers in Chania"></a>
@@ -31,6 +36,23 @@
      <a href="Bus.html"><img  class="demo" src="Bus.png" alt="Flowers in Chania"></a>
        <a href="#"><img class="demo"  src="https://m.media-amazon.com/images/M/MV5BMzRiZWUyN2YtNDI4YS00NTg2LTg0OTgtMGI2ZjU4ODQ4Yjk3XkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_FMjpg_UX1000_.jpg" alt="Flowers in Chania"></a>                                                                          
      
-
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>

@@ -35,7 +35,7 @@ body{
         
         <div class="col-md-12">
             
-            <input type="search" id="address" class="form-control" placeholder="Search webseries/movies" />
+            <input type="search" id="address" onkeyup="myFunction()" class="form-control" placeholder="Search webseries/movies" />
 
             
         </div>
@@ -44,8 +44,48 @@ body{
     
     
 </div>
+<ul id="myUl">
+    <li><a href="Lookatme.html">Look at me: XXXTentacion</a></li>
+       <li><a href="Allofus.html">All of us are dead</a></li>
+          <li><a href="#">Crash LAnding on you</a></li>
+  <li><a href="Money.html">Money Heist</a></li>
+  <li><a href="Moneykr.html">Money Heist korea: Joint economic area</a></li>
+  <li><a href="Purple.html">Purple Hearts</a></li>
+  <li><a href="Squid.html">Squid game</a></li>
+  <li><a href="Un.html">Uncontrollably fond</a></li>
+<li><a href="#">Extraordinary Attorney Woo</a></li>
+  <li><a href="Train.html">Train to Busan</a></li>
+   <li><a href="Bus.html">Business proposal</a></li>
+    <li><a href="Fire.html">FireStarter</a></li>
+    <li><a href="Kota.html">Kota Factory</a></li>
+  <li><a href="Sher.html">SherShaah</a></li>
+  <li><a href="Look.html">Look Both Ways</a></li>
+   <li><a href="Day.html">Dayshift</a></li>
+  <li><a href="The.html">The Tomorrow War</a></li>
+    <li><a href="Naruto.html">Naruto</a></li>
+    <li><a href="peaky.html">Peaky Blinders</a></li>
 
-
-
+    <li><a href="Conj.html">The Conjuring</a></li>
+  </ul>
+    <a href="Conj.html"><img  class="demo" src="Conj.png" alt="Flowers in Chania"></a>
+ 
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>

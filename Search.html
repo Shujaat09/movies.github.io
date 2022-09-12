@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Search query </title>
+   <script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
+
   <link rel="icon" type="image/x-icon" href="netflix.jpg">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -9,50 +11,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     
 </head>
-<body><style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-           body {
-                           font-family: 'Poppins', sans-serif;
-         }
-                   .demo  {
-  width: 210px;
-  height: 360px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-              }
-  </style>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-  <ul id="myUl">
-    <li><a href="Allofus.html"><img class="demo"  src="Dead.jpeg" alt="All of us are dead"></a></li>
-     <li><a href="Train.html"><img  class="demo" src="Train.png" alt="Train to busan"></a><li>
-  </ul>
-     <a href="Moneykr.html"><img  class="demo" src="moneykr.png" alt="Flowers in Chania">
-      <a href="revenge.txt"><img  class="demo" src="https://m.media-amazon.com/images/M/MV5BN2U4Yzg0ZTctYTMzMS00M2YwLTkxZDAtMzYwM2I0YTY2M2Q2XkEyXkFqcGdeQXVyMzE4MDkyNTA@._V1_FMjpg_UX1000_.jpg" alt="Flowers in Chania"></a>                                                                                   
-    <a href="Un.html"><img  class="demo" src="Un.png" alt="Flowers in Chania"></a>
-           <a href="#"><img  class="demo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbpoUrCurs17HjSW-4RYSYJCo2zYRR1JIuogGzwzTpEz3YeImQ" alt="Flowers in Chania"></a>
-     <a href="Squid.html"><img  class="demo" src="Squid.png" alt="Flowers in Chania"></a>
-     <a href="Bus.html"><img  class="demo" src="Bus.png" alt="Flowers in Chania"></a>
-       <a href="#"><img class="demo"  src="https://m.media-amazon.com/images/M/MV5BMzRiZWUyN2YtNDI4YS00NTg2LTg0OTgtMGI2ZjU4ODQ4Yjk3XkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_FMjpg_UX1000_.jpg" alt="Flowers in Chania"></a>                                                                          
-     
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+<body>
+  <style>
+    .container{
+    
+    margin-top:100px;
 }
-</script>
+
+body{
+    background-color:#E0E0E0;
+}
+  </style>
+
+
+<div class="container">
+    
+    <div class="row">
+        
+        <div class="col-md-12">
+            <!--To use the full functionality visit https://www.algolia.com-->
+            <h6 class="text-center">Type your location(New york, London, Delhi, Tokyo)</h6>
+            
+            <input type="search" id="address" class="form-control" placeholder="Where are we going?" />
+
+            
+        </div>
+        
+    </div>
+    
+    
+</div>
+
+
+
 </body>
 </html>

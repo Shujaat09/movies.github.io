@@ -54,15 +54,10 @@
   </style>
     <script>
 
-function mousehandler(e){
-var myevent = (isNS) ? e : event;
-var eventbutton = (isNS) ? myevent.which : myevent.button;
-if((eventbutton==2)||(eventbutton==3)) return false;
-}
-document.oncontextmenu = mischandler;
-document.onmousedown = mousehandler;
-document.onmouseup = mousehandler;
-
+window.addEventListener('contextmenu', function (e) {
+ 
+  e.preventDefault();
+}, false);
 function startTime() {
   const today = new Date();
   let h = today.getHours();

@@ -81,6 +81,7 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+      document.getElementById("device").innerHTML = device.family;
 </script>
 <body onload="startTime()">
     <nav class="navbar navbar-light bg-light">
@@ -226,6 +227,6 @@ Anime-
     <center><a class="lic" href="LICENSE.txt">View_License</a></center>
     <div id="txt"></div>
          <br>
-     
+       <p id="device"></p>
 </body>
 </html>

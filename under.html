@@ -6,9 +6,24 @@
     <body>
         <code>Server down for repair Error code[226]</code>
         <p>Start time::::</p>
-        <p id="demo"></p>
+        <code><p id="demo"></p></code>
+                <code><p id="demo2"></p></code>
         <script>
          document.getElementById("demo").innerHTML = Date();
+            var x = document.getElementById("demo2");
+            function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+            getLocation();
         </script>
     </body>
 </html>

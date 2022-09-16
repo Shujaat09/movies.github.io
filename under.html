@@ -9,6 +9,8 @@
     <code><p id="demo2"></p></code>
     <code><h9></h9></code>
     <code><h4>Server error</h4></code>
+	  <button onclick="myFunction()">Go Back</button>
+
     <script>
      document.getElementById("demo").innerHTML = Date();
       var x = document.getElementById("demo2");
@@ -47,6 +49,10 @@ function showPosition(position) {
           document.querySelector("h9").innerText= browserName;
          
 		 }
+	    function myFunction() {
+  location.replace("https://www.w3schools.com")
+}
     </script>
+	  
   </body>
 </html>

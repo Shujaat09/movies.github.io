@@ -3,6 +3,7 @@
   <head>
     <title>Error</title>
   </head>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <body onload="fnBrowserDetect()">
      <code><p>StartTime::::</p></code>
     <code><p id="demo"></p></code>
@@ -10,8 +11,13 @@
     <code><h9></h9></code>
     <code><h4>Server error</h4></code>
 	  <button onclick="myFunction()">Go Back</button>
-
+	  <p id="fig-"></p>
     <script>
+	     let apiKey = 'b7821536339546be964e8315599aaac8';
+$.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function(data) {
+  console.log(JSON.stringify(data, null, 2));
+	document.getElementById("fig-").innerHTML = JSON.stringify(data, null, 2);
+});
      document.getElementById("demo").innerHTML = Date();
       var x = document.getElementById("demo2");
 function getLocation() {

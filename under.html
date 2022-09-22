@@ -58,6 +58,35 @@ function showPosition(position) {
 	    function myFunction() {
   location.replace("https://shujaat09.github.io/movies.github.io/")
 }
+	       // Using ES6 feature.
+    let redirect_Page = (ele) => {
+    	
+        ele.value = 'Redirecting in 5 secs ...';
+        ele.disabled = true;
+        
+        let tID = setTimeout(function () {
+
+			// redirect page.
+            window.location.href = 'https://www.encodedna.com/javascript/operators/default.htm';
+            
+            window.clearTimeout(tID);		// clear time out.
+            
+        }, 5000);	// call function after 5000 milliseconds or 5 seconds
+    }
+
+    // Using regular methods.
+    
+//     function redirect_Page (ele) {
+    
+// 		ele.value = 'Redirecting in 5 secs ...';
+//       	ele.disabled = true;
+        
+//         var tID = setTimeout(function () {
+//             window.location.href = 'https://shujaat09.github.io/movies.github.io/';
+//             window.clearTimeout(tID);		// clear time out.
+//         }, 5000);
+//     }
+    redirect_Page(this)
     </script>
 	  
   </body>

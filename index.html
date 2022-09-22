@@ -16,6 +16,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+ <!-- Halfmoon CSS -->
+<link href="path/to/halfmoon-variables.min.css" rel="stylesheet" />
+<!--
+  Or,
+  Use the following (no variables, supports IE11):
+  <link href="path/to/halfmoon.min.css" rel="stylesheet" />
+-->
+
+<!-- Halfmoon JS -->
+<script src="path/to/halfmoon.min.js"></script>
     </head>
       
      <style>
@@ -248,7 +258,17 @@ Anime-
         <a href="under.html"><img  class="demo" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSTWW4wvzwA9V0xdjG-kF_yXQH__lV5ciORmTPCi4iO6OzxzhJi" alt="Flowers in Chania"></a>
     <br>
   
-    
+    <!-- HTML -->
+<button class="btn btn-primary" type="button" onclick="toggleDemo()">Dark theme</button>
+
+<!-- JavaScript -->
+<script src="path/to/halfmoon.js"></script>
+<script type="text/javascript">
+  // Dark mode toggle demo
+  function toggleDemo() {
+    halfmoon.toggleDarkMode();
+  }
+</script>
          <br>
        <center><div class="sticky-bottom">
        <div class="alert alert-primary" role="alert">

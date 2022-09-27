@@ -94,6 +94,10 @@
         .nav-link {
            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
           }
+      .dark-mode {
+  background-color: black;
+  color: white;
+}
   </style>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -110,7 +114,10 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
   <!--End of Tawk.to Script-->
  <script>
- 
+ function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
 
   /*function check(e)
     {
@@ -155,8 +162,9 @@ function checkTime(i) {
       Netflix-Kr
     </a>
    
-          <a class="nav-link" href="#">View</a>
-      <i class="bi bi-moon-stars-fill"></i>
+         
+      <button onclick="myFunction()"><i class="bi bi-moon-stars-fill"></i></button>
+
   </div>
       
 </nav><br><br>

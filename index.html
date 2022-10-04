@@ -6,66 +6,12 @@
 </head>
 <body>
   <style>
-    $spinner-color: #69717d !default
-$spinner-size: 48px !default
-.overlay
-  background: rgba(black,.8)
-  height: 100vh
-    
-.spinner
-  font-size: $spinner-size
-  position: relative
-  display: inline-block
-  width: 1em
-  height: 1em
-  &.center
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    margin: auto
-  .spinner-blade
-    position: absolute
-    left: .4629em
-    bottom: 0
-    width: .074em
-    height: .2777em
-    border-radius: .0555em
-    background-color: transparent
-    transform-origin: center -.2222em
-    animation: spinner-fade 1s infinite linear
-    $animation-delay: 0s
-    $blade-rotation: 0deg
-    @for $i from 1 through 12
-      &:nth-child(#{$i})
-        animation-delay: $animation-delay
-        transform: rotate($blade-rotation)
-        $blade-rotation: $blade-rotation + 30
-        $animation-delay: $animation-delay + .083
-@keyframes spinner-fade
-  0%
-    background-color: $spinner-color
-  100%
-    background-color: transparent
-
+    img {
+      width: 100px;
+      height: 50px;
+    }
   </style>
-<div class="overlay">
-  <div class="spinner center">
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-    <div class="spinner-blade"></div>
-  </div>
-</div>
+   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL0AAAB+CAMAAABGdeAYAAAAeFBMVEX///+8AC22AAC8ACu5ABu6ACG5ABj04OP++/y6AB/u0NS4ABC7ACf9+Pm4AA3muL7eo6nYlJfUh4rQdnzOcXbiq7LLW2vKXGjrxcvblJ778vTcn6PBNUfERFC9FDHsy8736Om9JDK/LjrHT12/NzveqarNZXDAMEAjLCoXAAACVUlEQVR4nO2b23aCMBBFTYBwC6IFvNBaFdv6/3/YpNbadtULkDqctWa/+baNh3FIJqMRwzAMwzAMwzAMwzAMw3wSZVkWUUt0IArzyfShKMuyeJhO8jCjFrqZbFPNXrZaKT+2+Erp7cus2iB8g/B1LmXgeZ44YT4FUu5eQ2q5K4RvjQrE3wSqeRuyfzKXsXfG/eM3iOU8oZY8Q1Zo/4L6AV8XQ8x/VKX+pXX/Wn9/XA2uitZFeov7h39a1NS6P0ma66H5Fp/toNK/0OcKzd8EwYJa+UR1c2qOeGlFLX0kl23ljb7MqbUP5Kq9vNFXg9BPOqz8YfUH8OiGe91JXgi9J+8bolWbUvkTf0X9t7WUneWFkEta+cXFruwaXkxa9qNd3ENeiHhHmZ1Jn9xY5IROvm765Mbi7ekatkfVU14I9UglXz91LfUn9BPV4ud9U28h63dW/ZfeLP6KRj7sVeuPeDFNvzDt3iN8x59SyGdlu/epcwQlxSZD+OwiOCY6zxTRWbuoOBa5JrBfpo7sU4pOc+Ym9qZVmxHYazexN8HXBPauYm+Cf3/5jUP7zd3tk7Ez+/H9NxfA7V0VTFMy2b6lPXZyoO2xKyb2vxV4p4DdpWF3yNhvJ9hvhthv5dg7IuC7Udg7geC7sNg74NinD6N6j3zyg33qBn7iiX3aDH7SDz5lgT3hAj5dBD7ZBT5VBz7RCD5N2nqStxnEA3sCeoq6zQR7OrwJ9hH27QEL8s0NC/KtGQvyjSUL8m2xA79v6g2xylwD9ZYkwzAMwzAMwzAMwzAM80+8A2vOKvnD9lexAAAAAElFTkSuQmCC" align="left">
   <code>Connection close</code>
 </body>
 </html>

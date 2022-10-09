@@ -103,9 +103,9 @@
     }
   </style>
         <header>
-          <form id="form"></form>
+          <form id="form">
             <input type="text" placeholder="Search" id="search" class="search">
- 
+ </form>
   </header>
 <main id="main">
   <div class="movie">
@@ -178,11 +178,11 @@
         return 'red'
       }
     }
-    form.addEventListener('submit' , (e) => {
+    form.addEventListener('submit', (e) => {
               e.preventDefault();
       const searchTerm = search.value;
       if(searchTerm) {
-        getMovies(searchURL+'&query='+searchTerm)
+        getMovies(searchURL+'&query='+ searchTerm)
       }else{
         getMovies(API_URL);
       }

@@ -21,16 +21,11 @@
     
   </style>
   <main id="main">
-         <div class="card-group">
-  <div class="icard">
     <div class="movie">
     <img src="https://google.com/image.png" class="i1" alt="...">
  
       
     </div>
-  </div>
-    </div>
-      
   </main>
   <script>
    const API_KEY = 'api_key=baeeda532eece053e2763287f8a35741';
@@ -44,8 +39,8 @@ const main = document.getElementById('main');
       
       fetch(url).then(res => res.json()).then(data => {
         console.log(data);
-        console.log(data.cast)
-        showMovies(data.cast);
+        console.log(data.backdrop_path)
+        showMovies(data.backdrop_path);
       })
     }
     
